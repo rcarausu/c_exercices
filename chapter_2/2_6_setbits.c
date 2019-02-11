@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 
 /*
@@ -24,13 +25,23 @@ unsigned setbits(unsigned x, int p, int n, unsigned y) {
 
 int main(int argc, char *argv[]) {
 
+	/*
 	unsigned x = atoi(argv[1]);
 	int p = atoi(argv[2]);
 	int n = atoi(argv[3]);
+	*/
+	unsigned x = 684;
+	unsigned y = 3182;
+	int p = 8;
+	int n = 4;
 
-	printf("getbits(%d, %d, %d): %d\n", x, p, n, getbits(x, p, n));
+	printf("getbits(%d, %d, %d, %d): %d\n", x, p, n, y, getbits(x, p, n));
 
-	printf("%d\n", setbits(684, 8, 4, 3182));
+	int result = setbits(x, p, n, y);
+
+	assert( result == 748 );
+
+	printf("Assert success, result: %d\n", result);
 
 	return 0;
 }
