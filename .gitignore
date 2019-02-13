@@ -1,2 +1,3 @@
 # ignore .out file generated when compiling C code
-.out
+*.out
+.vscode
