@@ -10,7 +10,7 @@ int main() {
     int a,c;
 
     while ((c = getchar()) != EOF) {
-        a = 0; // We use this char to control wheter c is one of the special chars or not.
+        a = 0; // We use this char to control whether c is one of the special chars or not.
         if (c == '\t') {
             putchar('\\');
             putchar('t');
