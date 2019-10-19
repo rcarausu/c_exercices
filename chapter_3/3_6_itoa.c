@@ -57,7 +57,7 @@ int number_width(int n)
     int l = 0;
     while (n != 0) 
     {
-        n = n /= 10;
+        n /= 10;
         l++;
     }
 
@@ -81,7 +81,7 @@ void itoa(int n, char s[], int pad)
         s[i++] = '-';
 
     while (i < (pad + length)) 
-        s[i++] = ' ';
+        s[i++] = '_';
 
     s[i] = '\0';
 
